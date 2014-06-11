@@ -13,4 +13,4 @@ Le défi: Inscription à une Mailing List pour être informé de la sortie offic
 # Les objectifs
 
 - Insertion des adresses email dans une base de données
-- Envoi d'une newsletter à l'ensemble d'un base de données
+- Envoi d'une newsletter à l'ensemble d'une base de données
