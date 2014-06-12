@@ -1,0 +1,465 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+/*MOHAVE*/
+@font-face {
+    font-family: 'mohaveregular';
+    src: url('../font/mohave-webfont.eot');
+    src: url('../font/mohave-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/mohave-webfont.woff') format('woff'),
+         url('../font/mohave-webfont.ttf') format('truetype'),
+         url('../font/mohave-webfont.svg#mohaveregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'mohavebold';
+    src: url('../font/mohave-bold-webfont.eot');
+    src: url('../font/mohave-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/mohave-bold-webfont.woff') format('woff'),
+         url('../font/mohave-bold-webfont.ttf') format('truetype'),
+         url('../font/mohave-bold-webfont.svg#mohavebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'mohavesemibold';
+    src: url('../font/mohave-semibold-webfont.eot');
+    src: url('../font/mohave-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/mohave-semibold-webfont.woff') format('woff'),
+         url('../font/mohave-semibold-webfont.ttf') format('truetype'),
+         url('../font/mohave-semibold-webfont.svg#mohavesemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*PICTO*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('../font/icomoon.eot?-7wxf5o');
+    src:url('../font/icomoon.eot?#iefix-7wxf5o') format('embedded-opentype'),
+        url('../font/icomoon.woff?-7wxf5o') format('woff'),
+        url('../font/icomoon.ttf?-7wxf5o') format('truetype'),
+        url('../font/icomoon.svg?-7wxf5o#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-font_revolution:before {content: "\e60b";}
+
+.icon-font_revolution{
+  color:#e4565a;
+  font-size: 100px;
+}
+
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+       -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.clear { display: inline-block; }
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+.gris { background-color : #E6ECF0; }
+
+.visible { display: block; }
+.invisible { display: none; }
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.red{color:#e4565a;font-weight: 700;}
+header {
+  width: 100%;
+  height: 100%;
+}
+
+header .genc {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  padding: 0;
+  color: #ffffff;
+
+  background: url("../img/bg.jpg") no-repeat center bottom; 
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+header .under-promo {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  max-height: 200px;
+  padding: 0;
+  font-size: 25px;
+  font-weight: 300;
+  font-family:"Lato", helvetica,arial,sans-serif;
+}
+
+header .under-promo p { padding-bottom: 0; }
+
+h1{
+  font-family: "mohavesemibold", helvetica, arial, sans-serif;
+  color:#3a3a3a;
+  line-height: 1;
+  padding:65px 0 50px 0;
+}
+
+.intro_titre{font-size: 3.8em; word-spacing: 10px;}
+.intro_titre1{font-size: 10em;}
+
+/* ==========================================================================
+   TEXTE
+   ========================================================================== */
+.italic{font-style: italic;}
+.container{width: 960px; margin:0 auto; clear: both;}
+
+    /* PARAGRAPHE TEXTE */
+    .texte{margin-top: 10px;}
+
+    .texte p{
+        font-size: 1.2em;
+        line-height: 1.8;
+        width: 715px;
+        margin: 0 auto;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        font-weight: 400;
+        font-family: "Lato", helvetica,arial,sans-serif;
+    }
+
+    h3, h4{
+        text-align: center;
+        margin: 30px 0;
+        font-size: 1.7em;
+        font-family:  "mohaveregular", helvetica,arial,sans-serif;
+    }
+
+    h4{
+        font-family:  "lato", helvetica,arial,sans-serif;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: 400;
+        margin: -45px 0 45px 0;
+    }
+
+
+/* ==========================================================================
+   Mailing
+   ========================================================================== */
+.mailing{
+  font-family: "lato", helvetica,arial,sans-serif;
+  margin: 75px 0;
+}
+
+.mailing a{
+  color:#3a3a3a;
+  text-decoration: none;
+  font-size: 1.2em;
+  border: 2px solid #3a3a3a;
+  padding:20px 10px;
+
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.mailing a:hover, .projet a:hover{
+  border: 2px solid #e4565a;
+}
+
+/* ==========================================================================
+   Voir le projet
+   ========================================================================== */
+.projet{
+  position: fixed;
+  top:30px;
+  right:15px;
+  font-family: "mohaveregular", helvetica,arial,sans-serif;
+}
+
+.projet a{
+  text-decoration: none;
+  color:#3a3a3a;
+  border:2px solid #3a3a3a;
+  padding:10px;
+  font-size: 1.2em;
+}
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer_intro{
+    background:#e4565a;
+    width: 100%;
+    padding:10px 0 10px 0;
+}
+
+/* ==========================================================================
+   Inscription
+   ========================================================================== */
+
+/* FORMULAIRE */
+.form-list{
+  list-style: none;
+}
+* {outline: none;}
+form { width: 600px; margin: 0 auto; }
+form p { font-size: 20px; line-height: 1.5; }
+form span { display: block; }
+
+input, textarea { color: #777777; font-size: 15px; font-weight: 300;padding:20px 70px 20px 10px;border:4px solid #e4565a;width: 300px;}
+input::-moz-placeholder, textarea:-moz-placeholder {color: #777777; font-size: 15px; font-weight: 300; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #777777; font-size: 15px; font-weight: 300; }
+input::-o-input-placeholder, textarea::-o-input-placeholder { color: #777777; font-size: 15px; font-weight: 300; }
+input::-ms-input-placeholder, textarea::-ms-input-placeholder { color: #777777; font-size: 15px; font-weight: 300; }
+input.placeholder, textarea.placeholder { color: #777777; font-size: 15px; font-weight: 300; }
+
+input[type="text"], textarea {
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    background-color: transparent;
+}
+
+textarea { width: 100%; height: 100px; resize: none; }
+input[type="text"]:focus, textarea:focus { border-color: #333; }
+
+input[type="submit"] {
+    font-family: "Lato", helvetica, sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    border: none;
+
+    display: block;
+    margin: 0 auto;
+
+    cursor: pointer;
+    width: 135px;
+    height: 62px;
+    color: #3a3a3a;
+    background-color: transparent;
+
+    border-bottom: 3px solid #3a3a3a;
+    margin-top: 20px;
+
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+input[type="submit"]:hover { color: #e4565a; border-bottom: 3px solid #e4565a;}
+input[type="submit"]:active { color: #e63b3f; }
+
+/* MSG ERREUR CONTACT*/
+form .emailform, form.formulaireContact span.nomContact, form.formulaireContact span.emailContact, form.formulaireContact span.sujetContact, form.formulaireContact span.msgContact{
+    position: relative;
+    color:red;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* LABEL */
+    label {  
+        display: inline-block;  
+        cursor: pointer;  
+        position: relative;  
+        padding-left: 25px;  
+        margin-right: 15px;  
+        border-radius:10px;
+        color:#3a3a3a;
+        font-family: "mohavebold", helvetica,arial,sans-serif;
+        font-size: 25px;
+        margin: 30px 50px 0 0;
+    }  
+
+    input[type=radio] {  
+        display: none;  
+    }  
+
+    label:before {  
+        content: "";  
+        display: inline-block;  
+        width: 20px;  
+        height: 20px;  
+        border-radius:10px;
+        margin-right: 10px;  
+        position: absolute;  
+        left: 0;  
+        bottom: 1px;  
+        background-color: #e4565a;  
+        box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+    }  
+
+    input[type=radio]:checked + label:before {  
+        content: "\2022";  
+        color: #f3f3f3;  
+        font-size: 60px;  
+        text-align: center;  
+        line-height: 21px;  
+    }
+
+    /* MSG ERREUR CONTACT*/
+form.formulaire span.emailContact{
+    position: relative;
+    color:red;
+    font-size: 14px;
+    font-weight: 700;
+}
